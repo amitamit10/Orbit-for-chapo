@@ -17,13 +17,14 @@ namespace Orbit
             InitializeComponent();
         }
 
-        private PictureBox[, ] pictureBoxes = new PictureBox[GameConsts.BOARD_SIZE, GameConsts.BOARD_SIZE];
-        private PictureBox[, ] blackBalls = new PictureBox[GameConsts.BOARD_SIZE, GameConsts.BOARD_SIZE];
-        private PictureBox[, ] whiteBalls = new PictureBox[GameConsts.BOARD_SIZE, GameConsts.BOARD_SIZE];
 
-        private void InitBoard()
+
+        private void HomeBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Orbit homeForm = new Orbit();
+            homeForm.FormClosed += (s, args) => this.Close();
+            homeForm.Show();
         }
     }
 }

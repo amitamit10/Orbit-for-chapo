@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             board = new PictureBox();
             pictureBox1 = new PictureBox();
+            HomeBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)board).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -39,9 +40,9 @@
             // 
             board.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             board.Image = Properties.Resources.orbitBoard;
-            board.Location = new Point(141, 3);
+            board.Location = new Point(135, 3);
             board.Name = "board";
-            board.Size = new Size(409, 435);
+            board.Size = new Size(478, 435);
             board.SizeMode = PictureBoxSizeMode.StretchImage;
             board.TabIndex = 0;
             board.TabStop = false;
@@ -49,18 +50,29 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(580, 211);
+            pictureBox1.Location = new Point(619, 220);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(68, 66);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // HomeBtn
+            // 
+            HomeBtn.Location = new Point(660, 391);
+            HomeBtn.Name = "HomeBtn";
+            HomeBtn.Size = new Size(112, 34);
+            HomeBtn.TabIndex = 2;
+            HomeBtn.Text = "Home";
+            HomeBtn.UseVisualStyleBackColor = true;
+            HomeBtn.Click += HomeBtn_Click;
+            // 
             // Game
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(HomeBtn);
             Controls.Add(pictureBox1);
             Controls.Add(board);
             Name = "Game";
@@ -74,5 +86,6 @@
 
         private PictureBox board;
         private PictureBox pictureBox1;
+        private Button HomeBtn;
     }
 }
