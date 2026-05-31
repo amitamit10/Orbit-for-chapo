@@ -90,7 +90,6 @@ namespace Orbit
                 rowChange = -tmp;
 
             } while (row != start.Row || col != start.Col);
-            board[start.Row, start.Col] = val;
         }
 
         public string printBoard()
