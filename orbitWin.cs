@@ -1,8 +1,8 @@
 namespace Orbit
 {
-    public partial class Orbit : Form
+    public partial class orbitWin : Form
     {
-        public Orbit()
+        public orbitWin()
         {
             InitializeComponent();
         }
@@ -19,7 +19,7 @@ namespace Orbit
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Game gameForm = new Game();
+            Gui gameForm = new Gui();
             gameForm.FormClosed += (s, args) => this.Close();
             gameForm.Show();
             this.Hide();

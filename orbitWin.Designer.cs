@@ -1,6 +1,6 @@
 ﻿namespace Orbit
 {
-    partial class Orbit
+    partial class orbitWin
     {
         /// <summary>
         ///  Required designer variable.
